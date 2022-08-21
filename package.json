@@ -5,7 +5,7 @@
     "author": "dai zamurai",
     "description": "e2e test",
     "dependencies": {
-      "cypress": "^8.7.0"
+      "cypress": "^10.3.0"
     },
     "devDependencies": {
       "mochawesome": "^7.0.1",

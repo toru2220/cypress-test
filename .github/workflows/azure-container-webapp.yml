@@ -3,6 +3,7 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    container: cypress/included:latest
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
@@ -13,6 +14,6 @@ jobs:
           browser: chrome
           headless: true
         # cypress debug
-        env:
-          DEBUG: 'cypress:*'
+        # env:
+        #   DEBUG: 'cypress:*'
 

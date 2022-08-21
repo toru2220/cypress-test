@@ -1,0 +1,15 @@
+{
+    "name": "e2e",
+    "version": "0.0.0",
+    "main": "index.js",
+    "author": "dai zamurai",
+    "description": "e2e test",
+    "dependencies": {
+      "cypress": "^8.7.0"
+    },
+    "devDependencies": {
+      "mochawesome": "^7.0.1",
+      "mochawesome-merge": "^4.2.0",
+      "mochawesome-report-generator": "^6.0.1"
+    }
+  }

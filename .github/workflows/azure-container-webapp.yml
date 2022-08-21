@@ -1,0 +1,19 @@
+name: e2e_test
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      # cypress test run
+      - name: cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: e2e
+          browser: chrome
+          headless: true
+        # cypress debug
+        env:
+          DEBUG: 'cypress:*'
+

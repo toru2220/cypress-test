@@ -18,9 +18,9 @@ jobs:
       - name: Save build folder
         uses: actions/upload-artifact@v3
         with:
-          name: build
+          name: frontend
           if-no-files-found: error
-          path: ./
+          path: frontend
 
   ui-chrome-tests:
     timeout-minutes: 15
@@ -45,8 +45,8 @@ jobs:
       - name: Download the build folders
         uses: actions/download-artifact@v3
         with:
-          name: build
-          path: ./
+          name: frontend
+          path: frontend
 
       - name: Cypress info
         run: npx cypress info
@@ -60,7 +60,7 @@ jobs:
       - name: "UI Tests - Chrome"
         uses: cypress-io/github-action@v4
         with:
-          start: yarn start:ci
+          start: npm run cypress run
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: chrome

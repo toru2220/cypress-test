@@ -20,7 +20,7 @@ jobs:
         with:
           name: build
           if-no-files-found: error
-          path: build
+          path: ./
 
   ui-chrome-tests:
     timeout-minutes: 15
@@ -46,7 +46,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build
+          path: ./
 
       - name: Cypress info
         run: npx cypress info

@@ -25,7 +25,6 @@ jobs:
         with:
           working-directory: frontend
           browser: chrome
-          parallel: true
         env:
           DEBUG: "cypress:server:args"
 

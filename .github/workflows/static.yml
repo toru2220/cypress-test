@@ -35,7 +35,7 @@ jobs:
           script: |
           
             context.payload = context.payload || {};
-            const envs = {'dev': { name: 'dev', prefix: 'uuuuu', acr: 'D'}, 'qa': { name: 'dev', prefix: 'dyyyy', acr: 'P'}};
+            const envs = {'dev': { name: 'dev', prefix: 'uuuuu'}, 'qa': { name: 'dev', prefix: 'dyyyy', acr: 'P'}};
             const inputs = context.payload.inputs;
             const temps = context.payload.inputs || {};
             const win = context.payload.inputs | {};
@@ -44,17 +44,14 @@ jobs:
             console.log(inputs);
             console.log(inputs.tagName);
             console.log(context.payload.inputs);
-            
+
             if( inputs.tagName ) {
               envData = envs[inputs.env];
               console.log(envData);
               console.log(envData.prefix);
             }
             
-            if( temps.tagName ) {
-              console.log("temps exsits");
-            }
+            envData.acr = envData.acr ? envData.acr : envData.prefix;
             
-            if( win.tagName ) {
-              console.log("win exsits");
-            }
+            console.log(envData.acr);
+

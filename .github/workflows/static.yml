@@ -19,10 +19,12 @@ on:
           - "prd"
 
 jobs:
-  comment:
+  set-env:
+    name: "www"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
+      - name: "eee"
+        uses: actions/github-script@v6
         with:
           script:
             echo "${{ context }}";

@@ -38,3 +38,7 @@ jobs:
             console.log(inputs);
             console.log(inputs.tagName);
             console.log(context.payload.inputs);
+            
+            if( inputs.tagName ) {
+              console.log("tagName exsits");
+            }

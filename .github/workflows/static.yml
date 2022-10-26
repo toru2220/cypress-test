@@ -46,7 +46,7 @@ jobs:
             console.log(context.payload.inputs);
 
             if( inputs.tagName ) {
-              envData = envs[inputs.env];
+              envData = envs
               console.log(envData);
               console.log(envData.prefix);
             }

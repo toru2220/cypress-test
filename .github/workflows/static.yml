@@ -35,7 +35,7 @@ jobs:
           script:
             const inputs = context.payload.inputs | {};
             
-            if( inputs.tagName ) {
+            if( "tagName" in inputs ) {
               console.log(inputs.tagName)
             } else {
               console.log(context.payload)

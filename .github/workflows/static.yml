@@ -36,4 +36,5 @@ jobs:
             const inputs = context.payload.inputs;
             
             console.log(inputs);
+            console.log(inputs.tagName);
             console.log(context.payload.inputs);

@@ -36,8 +36,8 @@ jobs:
             const inputs = context.payload.inputs | {};
             
             if( inputs.tagName ) {
-              console.log(inputs.tagName)
+              console.log(inputs.tagName);
             } else {
-              console.log(inputs)
-              console.log(context.payload)
+              console.log(inputs);
+              console.log(context.payload);
             }

@@ -33,16 +33,21 @@ jobs:
         uses: actions/github-script@v6
         with:
           script:
+            const envs = { 'dev': { name: 'dev', prefix: 'dyyyy' }, 'qa': { name: 'dev', prefix: 'd' } };
+            
             const inputs = context.payload.inputs;
             const temps = context.payload.inputs || {};
             const win = context.payload.inputs | {};
+            let envData = null;
             
             console.log(inputs);
             console.log(inputs.tagName);
             console.log(context.payload.inputs);
             
             if( inputs.tagName ) {
-              console.log("inputs exsits");
+              envData = envs[inputs.env];
+              console.log(envData);
+              console.log(envData.prefix);
             }
             
             if( temps.tagName ) {

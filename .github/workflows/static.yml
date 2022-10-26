@@ -34,7 +34,7 @@ jobs:
         with:
           script: |
           
-            const envs = {'dev': { name: 'dev', prefix: 'dyyyy', acr: 'D'}, 'qa': { name: 'dev', prefix: 'dyyyy', acr: 'P'}};
+            const envs = {'dev': { name: 'dev', prefix: 'uuuuu', acr: 'D'}, 'qa': { name: 'dev', prefix: 'dyyyy', acr: 'P'}};
             const inputs = context.payload.inputs;
             const temps = context.payload.inputs || {};
             const win = context.payload.inputs | {};

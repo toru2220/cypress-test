@@ -33,7 +33,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script:
-            const inputs = context.payload.inputs;
+            const inputs = github.context.payload.inputs;
             
             if( inputs.tagName ) {
               console.log(inputs.tagName);

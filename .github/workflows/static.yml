@@ -33,8 +33,10 @@ jobs:
         uses: actions/github-script@v6
         with:
           script:
-            let inputs = context.payload.inputs | {};
+            const inputs = context.payload.inputs | {};
             
             if( inputs.tagName ) {
               console.log(inputs.tagName)
+            } else {
+              console.log(context.payload)
             }

@@ -34,11 +34,21 @@ jobs:
         with:
           script:
             const inputs = context.payload.inputs;
+            const temps = context.payload.inputs || {};
+            const win = context.payload.inputs | {};
             
             console.log(inputs);
             console.log(inputs.tagName);
             console.log(context.payload.inputs);
             
             if( inputs.tagName ) {
-              console.log("tagName exsits");
+              console.log("inputs exsits");
+            }
+            
+            if( temps.tagName ) {
+              console.log("temps exsits");
+            }
+            
+            if( win.tagName ) {
+              console.log("win exsits");
             }

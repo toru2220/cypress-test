@@ -32,7 +32,7 @@ jobs:
       - name: "eee"
         uses: actions/github-script@v6
         env:
-          NAME: ${{ secrets.USERNAME }}
+          NAME: "WWWWWWW"
         with:
           script: |
             echo "${NAME}"

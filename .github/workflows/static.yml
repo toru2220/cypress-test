@@ -13,9 +13,12 @@ jobs:
       - name: "eee"
         uses: actions/github-script@v6
         env:
-          NAME: "WWWWWWW"
+          FIRST_NAME: Mona
+          LAST_NAME: Octocat
         with:
           script: |
-            echo ${NAME}
+            const { FIRST_NAME, LAST_NAME } = process.env
+
+            echo ${FIRST_NAME}${LAST_NAME}
             
 

@@ -16,6 +16,6 @@ jobs:
           NAME: "WWWWWWW"
         with:
           script: |
-            echo "${NAME}"
+            echo ${NAME}
             
 

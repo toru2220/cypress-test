@@ -33,6 +33,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            export USERNAME="${{ secrets.USERNAME }}
+            export USERNAME="${{ secrets.USERNAME }}"
             echo $USERNAME
 

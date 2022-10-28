@@ -33,25 +33,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-          
-            context.payload = context.payload || {};
-            const envs = {'dev': { name: 'dev', prefix: 'uuuuu'}, 'qa': { name: 'dev', prefix: 'dyyyy', acr: 'P'}};
-            const inputs = context.payload.inputs;
-            const temps = context.payload.inputs || {};
-            const win = context.payload.inputs | {};
-            let envData = null;
-            
-            console.log(inputs);
-            console.log(inputs.tagName);
-            console.log(context.payload.inputs);
-
-            if( inputs.tagName ) {
-              envData = envs.dev
-              console.log(envData);
-              console.log(envData.prefix);
-            }
-            
-            envData.acr = envData.acr ? envData.acr : envData.prefix;
-            
-            console.log(envData.acr);
+            export USERNAME="${{ secrets.USERNAME }}
+            echo $USERNAME
 

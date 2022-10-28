@@ -32,8 +32,8 @@ jobs:
       - name: "eee"
         uses: actions/github-script@v6
         env:
-          USERNAME: ${{ secrets.USERNAME }}
+          USER: ${{ secrets.USERNAME }}
         with:
           script: |
-            echo $USERNAME
+            echo $USER
 

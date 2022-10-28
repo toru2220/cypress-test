@@ -31,8 +31,9 @@ jobs:
     steps:
       - name: "eee"
         uses: actions/github-script@v6
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
         with:
           script: |
-            export USERNAME="${{ secrets.USERNAME }}"
             echo $USERNAME
 

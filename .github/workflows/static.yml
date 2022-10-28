@@ -5,25 +5,6 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-    inputs:
-      tagName:
-        description: "tag"
-        required: true
-        type: choice
-        options:
-          - "latest"
-      env:
-        description: "環境"
-        required: true
-        type: choice
-        options:
-          - "dev"
-          - "stg"
-          - "prd"
-
 jobs:
   set-env:
     name: "www"

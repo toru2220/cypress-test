@@ -1,17 +1,10 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+on: push
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
 jobs:
-  set-env:
-    name: "www"
+  echo-input:
     runs-on: ubuntu-latest
     steps:
-      - name: "eee"
-        uses: actions/github-script@v6
+      - uses: actions/github-script@v6
         env:
           FIRST_NAME: Mona
           LAST_NAME: Octocat
@@ -19,6 +12,4 @@ jobs:
           script: |
             const { FIRST_NAME, LAST_NAME } = process.env
 
-            echo ${FIRST_NAME}${LAST_NAME}
-            
-
+            console.log(`Hello ${FIRST_NAME} ${LAST_NAME}`)

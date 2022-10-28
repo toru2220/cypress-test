@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         env:
-          FIRST_NAME: Mona
+          FIRST_NAME: ${{ secrets.USERNAME }}
           LAST_NAME: Octocat
         with:
           script: |

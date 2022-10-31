@@ -4,14 +4,10 @@ jobs:
   echo-input:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
+      - run: |
+          export PASS="${{ secrets.PASS }}"
+          echo $PASS
+          echo $FIRST_NAME
         env:
           FIRST_NAME: ${{ secrets.USERNAME }}
           LAST_NAME: Octocat
-        with:
-          script: |
-            const { FIRST_NAME, LAST_NAME } = process.env
-
-            console.log(`Hello ${FIRST_NAME} ${LAST_NAME}`)
-            
-            export PASS="${{ secrets.PASS }}"

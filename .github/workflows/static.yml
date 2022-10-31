@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          export PASS="${{ secrets.PASS }}"
           echo $PASS
           echo $FIRST_NAME
         env:
           FIRST_NAME: ${{ secrets.USERNAME }}
+          PASS: ${{ secrets.PASS }}
           LAST_NAME: Octocat
